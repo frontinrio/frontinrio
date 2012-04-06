@@ -76,7 +76,7 @@ TEMPLATE_DIRS = (
 
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 
-NOSE_ARGS = [ "-sd", '--nologcapture']
+NOSE_ARGS = [ "-sd", '--nologcapture', '-v', '--with-spec', '--spec-color']
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -88,7 +88,6 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django_nose',
     'inscricao',
-    'south',
 )
 
 LOGGING = {

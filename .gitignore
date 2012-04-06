@@ -1,0 +1,6 @@
+*.sw[a-z]
+*.pyc
+*.DS_Store
+*.mo
+frontinrio.sqlite3
+.ropeproject
