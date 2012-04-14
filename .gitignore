@@ -4,4 +4,5 @@
 *.mo
 frontinrio.sqlite3
 .ropeproject
+*.sqlite*
 static/
