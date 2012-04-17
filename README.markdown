@@ -8,7 +8,6 @@ Para colaborar você pode fazer um fork do repositório e submeter pull request 
 
 
 ### MEU AMBIENTE
-Todo o site está sendo feito com o django.
 Faça um git clone do projeto e depois entre nele.
     $cd frontinrio/frontinrio
     $make deps
