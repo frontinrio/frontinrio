@@ -1,6 +1,5 @@
-# Django settings for frontinrio project.
 import os
-# Django settings for pythonbrasil8 project.
+# Django settings for project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -88,7 +87,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django_nose',
     'inscricao',
-    'palestras',
+    # 'palestras',
 )
 
 LOGGING = {
