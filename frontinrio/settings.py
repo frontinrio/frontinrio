@@ -8,6 +8,17 @@ PROJECT_DIR = os.path.dirname(__file__)
 
 ADMINS = ()
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
+    }
+}
+
 MANAGERS = ADMINS
 
 TIME_ZONE = 'America/Sao_Paulo'
