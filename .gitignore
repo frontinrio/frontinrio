@@ -6,4 +6,4 @@ frontinrio.sqlite3
 .ropeproject
 *.sqlite*
 *.pyc
-ven
+settings_local.py

@@ -13,7 +13,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'pythonbrasil8.sqlite3',
+        'NAME': 'frontinrio.sqlite3',
     }
 }
 
@@ -72,11 +72,6 @@ TEMPLATE_DIRS = (
     os.path.join(PROJECT_DIR, 'templates'),
 )
 
-
-TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
-
-NOSE_ARGS = [ "-sd", '--nologcapture', '-v', '--with-spec', '--spec-color']
-
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -85,9 +80,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
-    'django_nose',
     'inscricao',
-    # 'palestras',
+    'palestras',
 )
 
 LOGGING = {
