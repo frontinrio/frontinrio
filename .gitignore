@@ -5,4 +5,5 @@
 frontinrio.sqlite3
 .ropeproject
 *.sqlite*
-static/
+*.pyc
+ven
