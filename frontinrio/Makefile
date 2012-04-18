@@ -14,7 +14,7 @@ syncb: deps
 	@python manage.py syncdb
 
 deps:
-	@pip install -r requirements.txt
+	@pip install -r requirements_env.txt
 
 clean:
 	@find . -iname "*.pyc" -delete
