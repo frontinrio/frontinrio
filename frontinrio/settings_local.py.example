@@ -1,0 +1,24 @@
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'frontinrio.sqlite3',
+    }
+}
+
+NOSE_ARGS = [ "-sd", '--nologcapture', '-v', '--with-spec', '--spec-color']
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+
+INSTALLED_APPS = (
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.sites',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'django.contrib.admin',
+    'django_nose',
+    'inscricao',
+    'palestras',
+)
+
+
