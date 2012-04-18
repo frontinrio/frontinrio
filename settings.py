@@ -89,7 +89,6 @@ INSTALLED_APPS = (
     'django_nose',
     'inscricao',
     'palestras',
-    'gunicorn',
 )
 
 LOGGING = {
