@@ -13,6 +13,7 @@ menu, nav, section, summary, time, mark, audio, video {
   font-size:100%;
   vertical-align:baseline;
   background:transparent;
+  list-style: none outside none;
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display:block;
@@ -99,6 +100,14 @@ header {
     margin-bottom: 11px
 }
 
+h2 {
+    color:green;
+    font-size:30px;
+    font-weight:bolder;
+    margin:10px 0;
+    border-bottom: 1px dotted #ddd;
+}
+
 article.chamada {
     position: absolute;
     right: 50px;
@@ -112,11 +121,25 @@ img.logo {
 
 article.chamada span {
     color: green;
-    font-size: 30px;
+    font-size: 24px;
+    font-weight:700;
 }
 
 section#main {
     color: #666666;
-    margin: 0 auto;
+    margin: 50px auto;
     width: 80%;
+}
+
+section#main .menu-principal {
+    display: inline-block;
+    font-weight:700;
+    margin-top:10px
+}
+
+section#main #about{
+    display: inline-block;
+    width: 85%;
+    margin-left: 30px;
+    vertical-align: top;
 }
