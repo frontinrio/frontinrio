@@ -95,22 +95,22 @@ body {
     font-size:20px;
 }
 
-body header {
+header {
     margin-bottom: 11px
 }
 
-body header article {
+article.chamada {
     position: absolute;
     right: 50px;
     top: 35px;
 }
 
-body header img {
+img.logo {
     margin-left: 120px;
     margin-top: 10px;
 }
 
-body header article span {
+article.chamada span {
     color: green;
     font-size: 30px;
 }

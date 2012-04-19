@@ -20,8 +20,8 @@
     <body>
         {%block cabecalho %}
         <header>
-            <img src="{% static 'frontinrio.png' %}" alt="FrontInRio 2012" />
-            <article>
+            <img class="logo" src="{% static 'frontinrio.png' %}" alt="FrontInRio 2012" itemprop="image" />
+            <article class="chamada" >
                 <p> O melhor evento de Front End está de volta</p>
                 <span>
                     <time itemprop="startdate" datetime="2012-06-02T08:00-03:00">02 de junho</time> na UniRio - URCA
@@ -44,13 +44,18 @@
         {% endblock cabecalho %}
 
         {% block content %}
-        <section id="main" class="main" itemscope itemtype="http://data-vocabulary.org/Event">
+        <section id="main" class="main" itemtype="http://data-vocabulary.org/Event">
             <article id="about">
                 <p class="phrase original"> O <span itemprop="summary">FrontInRio</span> é uma <span itemprop="description">oportunidade da comunidade de desenvolvimento front-end fluminense se conhecer e se aprimorar. Compartilhando experiências para o bem comum.</span></p>
             </article>
         </section>
         <footer>
             <section class="apoio">
+                <ul>
+                    <li class="globocom"></li>
+                    <li class="horaextra"></li>
+                    <li class="helabs"></li>
+                </ul>
             </section>
         </footer>
         {% endblock content %}
