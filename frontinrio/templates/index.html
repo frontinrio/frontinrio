@@ -1,4 +1,11 @@
 {% load staticfiles %}
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR"> <!--<![endif]-->
 <html>
     <head>
         <link href="{% static 'css/index.css' %}" rel="stylesheet" />
@@ -17,7 +24,7 @@
             <article>
                 <p> O melhor evento de Front End está de volta</p>
                 <span>
-                    02 de junho na UniRio - URCA
+                    <time itemprop="startdate" datetime="2012-06-02T08:00-03:00">02 de junho</time> na UniRio - URCA
                 </span>
             </article>
             <nav>
@@ -37,7 +44,7 @@
         {% endblock cabecalho %}
 
         {% block content %}
-        <section id="main">
+        <section id="main" class="main" itemscope itemtype="http://data-vocabulary.org/Event">
             <article id="about">
                 <p class="phrase original"> O <span itemprop="summary">FrontInRio</span> é uma <span itemprop="description">oportunidade da comunidade de desenvolvimento front-end fluminense se conhecer e se aprimorar. Compartilhando experiências para o bem comum.</span></p>
             </article>
