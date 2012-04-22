@@ -3,6 +3,12 @@
 from django.test import TestCase
 
 from inscricao.models import Inscricao
+from inscricao.forms import InscricaoForm
+
+def inscricao_form(data):
+    f = InscricaoForm(data)
+    f.is_valid()
+    return f
 
 
 class BaseTestModelInscricao(TestCase):
@@ -21,5 +27,21 @@ class BaseTestModelInscricao(TestCase):
     def test_tem_campo_email(self):
         self.assertEqual(self.inscricao.email, 'teste@test.com')
 
+class TestFormInscricao(TestCase):
 
+    def test_campos_obrigatorios(self):
+        form = inscricao_form({})
+        self.assertIn('nome', form.errors)
+        self.assertIn('cpf', form.errors)
+        self.assertIn('email', form.errors)
+
+    def test_validar_cpf_invalido(self):
+        data = {'nome': 'andre fonseca', 'email':'test@gmail.com', 'cpf': '123123123-24'}
+        form  = inscricao_form(data)
+        self.assertIn('cpf', form.errors)
+
+    def test_validar_cpf_valido(self):
+        data = {'nome': 'andre fonseca', 'email':'test@gmail.com', 'cpf': '32844513743'}
+        form  = inscricao_form(data)
+        self.assertNotIn('cpf', form.errors)
 
