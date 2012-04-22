@@ -29,6 +29,10 @@ class BaseTestModelInscricao(TestCase):
 
 class TestFormInscricao(TestCase):
 
+    def test_campos_excluidos_nao_devem_aparecer(self):
+        form = InscricaoForm()
+        self.assertNotIn('status', form.fields)
+
     def test_campos_obrigatorios(self):
         form = inscricao_form({})
         self.assertIn('nome', form.errors)
