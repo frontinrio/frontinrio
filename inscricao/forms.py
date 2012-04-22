@@ -9,6 +9,7 @@ class InscricaoForm(forms.ModelForm):
 
     class Meta:
         model  = Inscricao
+        exclude = ['status']
 
     def clean_nome(self):
         value = self.cleaned_data['nome']
