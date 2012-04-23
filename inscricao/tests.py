@@ -2,7 +2,7 @@
 
 from django.test import TestCase
 
-from inscricao.models import Inscricao
+from inscricao.models import Inscricao, Checkout
 from inscricao.forms import InscricaoForm
 
 def inscricao_form(data):
@@ -26,6 +26,25 @@ class BaseTestModelInscricao(TestCase):
 
     def test_tem_campo_email(self):
         self.assertEqual(self.inscricao.email, 'teste@test.com')
+
+
+class BaseTestModelCheckout(TestCase):
+
+    @classmethod
+    def setUpClass(self):
+        self.inscricao = Inscricao.objects.create(nome="Andre", email="teste@test.com")
+        self.checkout = Checkout.objects.create(codigo=1234, inscricao=self.inscricao)
+
+    @classmethod
+    def tearDownClass(self):
+        self.inscricao.delete()
+        self.checkout.delete()
+
+    def test_tem_campo_codigo(self):
+        self.assertEqual(self.checkout.codigo, 1234)
+
+    def test_tem_campo_inscricao(self):
+        self.assertEqual(self.checkout.inscricao, self.inscricao)
 
 class TestFormInscricao(TestCase):
 
