@@ -97,6 +97,16 @@ INSTALLED_APPS = (
     'palestras',
 )
 
+PAGSEGURO = {
+    'email': '',
+    'charset': 'UTF-8',
+    'token': '',
+    'currency': 'BRL',
+    'itemId1': '0001',
+    'itemDescription1': u'Inscrição no Front in Rio 2012',
+    'itemQuantity1': 1,
+}
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
