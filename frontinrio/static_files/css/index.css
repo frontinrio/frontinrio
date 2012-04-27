@@ -22,7 +22,7 @@ nav ul { list-style:none; }
 blockquote, q { quotes:none; }
 blockquote:before, blockquote:after,
 q:before, q:after { content:''; content:none; }
-a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
+a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; text-decoration:none}
 ins { background-color:#ff9; color:#000; text-decoration:none; }
 mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
 del { text-decoration: line-through; }
@@ -35,7 +35,7 @@ input, select { vertical-align:middle; }
 /* fixing firefox bug */
 div:after, ol:after, li:after, form:after, ul:after, dl:after {content:".";display:block;clear:both;visibility:hidden;height:0;overflow:hidden;}
 
-body { font:13px/1.231 sans-serif; *font-size:small;padding: 0 40px;}
+body { font:13px/1.231 sans-serif; *font-size:small;padding: 0;}
 select, input, textarea, button { font:99% sans-serif; }
 pre, code, kbd, samp { font-family: monospace, sans-serif; }
 
@@ -44,7 +44,6 @@ h1,h2,h3,h4,h5,h6 { font-weight: bold; }
 html { overflow-y: scroll;  overflow-x:hidden;}
 
 a:hover, a:active { outline: none; }
-a, a:active, a:visited { color: #607890; }
 a:hover { color: #036; }
 
 ul, ol { margin-left: 1.8em; }
@@ -87,21 +86,23 @@ button {  width: auto; overflow: visible; }
 
 
 html {
-    background: #f2f169;
-    background: url('../bg.png');
+    background-color: #fff;
 }
 
 body {
-    font-family: 'Open Sans Condensed', 'Lucida Sans', sans-serif;
-    font-size:20px;
+    font-family: sans-serif;
+    font-size:17px;
 }
 
 header {
-    margin-bottom: 11px
+    background: none repeat scroll 0 0 #EFEFEF;
+    box-shadow: 0 1px 7px #444444;
+    height: 159px;
+    margin-bottom: 11px;
 }
 
 h2 {
-    color:green;
+    color:#8BA522;
     font-size:30px;
     font-weight:bolder;
     margin:10px 0;
@@ -120,7 +121,7 @@ img.logo {
 }
 
 article.chamada span {
-    color: green;
+    color: #8BA522;
     font-size: 24px;
     font-weight:700;
 }
@@ -131,11 +132,20 @@ section#main {
     width: 80%;
 }
 
-section#main .menu-principal {
-    display: inline-block;
+header .menu-principal {
+    display: block;
     font-weight:700;
-    margin-top:10px
+    margin:10px 0 0 124px;
 }
+
+header .menu-principal li{
+    display:inline-block;
+    margin-right: 50px;
+}
+
+.item-home{ color: #BA3018; }
+.item-palestras { color: #D1C81C; }
+.item-inscricao { color: #8BA522; }
 
 section#main #about{
     display: inline-block;
